@@ -29,5 +29,7 @@ public class Ejemplo5 {
         System.out.println("substraction: "+sub);
         System.out.println("multiplication: "+mult);
         System.out.println("division: "+div);
+        inputValue.close();
+        inputValue2.close();
     }
 }
