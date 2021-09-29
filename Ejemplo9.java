@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class Ejemplo8 {
+public class Ejemplo9 {
     public static void main (String argv[]) {
         int edad;
         System.out.println("Que edad tienes:");
@@ -10,6 +10,8 @@ public class Ejemplo8 {
 
         if (edad >= 18){
             System.out.println("Mayor de edad");
+        }else{
+            System.out.println("Menor de edad");
         }
         inputValue.close();
     }
