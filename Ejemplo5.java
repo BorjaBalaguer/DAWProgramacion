@@ -8,13 +8,13 @@ public class Ejemplo5 {
         float mult;
         float div;
 
-        System.out.println(“Enter the number1: ”);
+        System.out.println(“Enter the number 1: ”);
 
         Scanner inputValue;
         inputValue = new Scanner(System.in);
         x = inputValue.nextFloat();
 
-        System.out.println(“Enter the number2: ”);
+        System.out.println(“Enter the number 2: ”);
 
         Scanner inputValue;
         inputValue = new Scanner(System.in);
