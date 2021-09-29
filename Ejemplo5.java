@@ -8,13 +8,13 @@ public class Ejemplo5 {
         float mult;
         float div;
 
-        System.out.println(“Enter the number1:”);
+        System.out.println(“Enter the number1: ”);
 
         Scanner inputValue;
         inputValue = new Scanner(System.in);
         x = inputValue.nextFloat();
 
-        System.out.println(“Enter the number2:”);
+        System.out.println(“Enter the number2: ”);
 
         Scanner inputValue;
         inputValue = new Scanner(System.in);
@@ -27,6 +27,6 @@ public class Ejemplo5 {
         System.out.println("sum:"+sum);
         System.out.println("substraction:"+sub);
         System.out.println("multiplication:"+mult);
-        System.out.println("division:"+sum);
+        System.out.println("division:"+div);
     }
 }
