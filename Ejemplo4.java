@@ -1,10 +1,17 @@
+import java.util.Scanner;
 public class Ejemplo4 {
-	public static void main(String[] args){
-		System.out.println("Enter the side:");
+    public static void main (String argv[]) {
+        float side;
+        float squareArea;
 
-		double squareArea = (x * x);
+        System.out.println(“Enter the side:”);
 
-		System.out.println("El area del cuadrado es: " + squareArea);
-	}	
+        Scanner inputValue;
+        inputValue = new Scanner(System.in);
+        side = inputValue.nextFloat();
+
+        squareArea = side * side;
+        System.out.println(squareArea);
+    }
 }
 
