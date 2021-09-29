@@ -20,28 +20,35 @@ public class Ejemplo13 {
         inputValue3 = new Scanner(System.in);
         orden = inputValue3.nextLine();
 
-        if (orden = "Ascendente"){
+        if (orden = Ascendente){
             System.out.println("-------------" );
             if(valor1 > valor2){
                 System.out.println(valor1 );
                 System.out.println(valor2);
-            }else{
+            }else if (valor2 > valor1) {
                 System.out.println(valor2 );
                 System.out.println(valor1);
-            }
+            }else{
+            System.out.println("-------------" );
+            System.out.println(valor1 + "=" + valor2);
+            
+        }
             
         }else if (orden = "Descendente"){
             System.out.println("-------------" );
             if(valor1 > valor2){
                 System.out.println(valor2 );
                 System.out.println(valor1);
-            }else{
+            }else if (valor2 > valor1){
                 System.out.println(valor1 );
                 System.out.println(valor2);
+            }else{
+                System.out.println("-------------" );
+                System.out.println(valor1 + "=" + valor2);
             }
         }else{
             System.out.println("-------------" );
-            System.out.println(valor1 + "=" + valor2);
+            System.out.println("Elige un orden");
         }
 
 
