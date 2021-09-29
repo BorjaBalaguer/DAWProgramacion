@@ -16,17 +16,18 @@ public class Ejemplo5 {
 
         System.out.println("Enter the number 2:");
 
-        Scanner inputValue;
-        inputValue = new Scanner(System.in);
-        y = inputValue.nextFloat();
+        Scanner inputValue2;
+        inputValue2 = new Scanner(System.in);
+        y = inputValue2.nextFloat();
 
         sum = x + y;
         sub = x - y;
         mult = x * y;
         div = x / y;
-        System.out.println("sum:"+sum);
-        System.out.println("substraction:"+sub);
-        System.out.println("multiplication:"+mult);
-        System.out.println("division:"+div);
+
+        System.out.println("sum: "+sum);
+        System.out.println("substraction: "+sub);
+        System.out.println("multiplication: "+mult);
+        System.out.println("division: "+div);
     }
 }
