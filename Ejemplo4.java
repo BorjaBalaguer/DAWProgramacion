@@ -4,7 +4,7 @@ public class Ejemplo4 {
         float side;
         float squareArea;
 
-5        System.out.println("Enter the side:");
+        System.out.println("Enter the side:");
 
         Scanner inputValue;
         inputValue = new Scanner(System.in);
