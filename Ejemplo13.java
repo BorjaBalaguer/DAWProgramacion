@@ -20,7 +20,7 @@ public class Ejemplo13 {
         inputValue3 = new Scanner(System.in);
         orden = inputValue3.nextLine();
 
-        if (orden = Ascendente){
+        if (orden == "Ascendente"){
             System.out.println("-------------" );
             if(valor1 > valor2){
                 System.out.println(valor1 );
@@ -34,7 +34,7 @@ public class Ejemplo13 {
             
         }
             
-        }else if (orden = "Descendente"){
+        }else if (orden == "Descendente"){
             System.out.println("-------------" );
             if(valor1 > valor2){
                 System.out.println(valor2 );
