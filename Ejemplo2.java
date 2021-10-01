@@ -1,13 +1,13 @@
 public class Ejemplo2 {
 	public static void main(String[] args){
 
-		double dividendo = 20;
+		int dividendo = 20;
 
-		double divisor = 6;
+		int divisor = 6;
 
-		double sumarAlFinal = 3;
+		int sumarAlFinal = 3;
 
-		double resultado = ((dividendo/divisor) + sumarAlFinal); 
+		int resultado = ((dividendo/divisor) + sumarAlFinal); 
 		System.out.println(resultado);
 	}	
 }
