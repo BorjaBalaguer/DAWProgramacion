@@ -4,8 +4,6 @@ public class Ejemplo13 {
     public static void main(String[] args) {
         int valor1, valor2;
         String orden;
-        String primera = "Ascendente";
-        String segunda = "Descendente";
         
         System.out.println("Orden: Ascendente o Descendente?");
         Scanner inputValue3;
@@ -22,7 +20,7 @@ public class Ejemplo13 {
         inputValue2 = new Scanner(System.in);
         valor2 = inputValue2.nextInt();
 
-        if (orden == primera){
+        if (orden.equals("Ascendente")){
             System.out.println("-------------");
             if(valor1 > valor2){
                 System.out.println(valor1 );
@@ -35,7 +33,7 @@ public class Ejemplo13 {
             System.out.println(valor1 + "=" + valor2);
             }
             
-        }else if (orden == segunda){
+        }else if (orden.equals("Descendente")){
             System.out.println("-------------");
             if(valor1 > valor2){
                 System.out.println(valor2);
