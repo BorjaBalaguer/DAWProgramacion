@@ -20,10 +20,10 @@ public class Ejemplo5 {
         mult = x * y;
         div = x / y;
 
-        System.out.println("La suma: "+sum);
-        System.out.println("La resta da: "+sub);
-        System.out.println("La multiplicacion da: "+mult);
-        System.out.println("La division da: "+div);
+        System.out.println("sum: "+sum);
+        System.out.println("subtraction: "+sub);
+        System.out.println("multiplication: "+mult);
+        System.out.println("div: "+div);
         inputValue.close();
         inputValue2.close();
     }
