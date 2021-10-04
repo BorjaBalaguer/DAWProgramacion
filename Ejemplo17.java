@@ -19,7 +19,7 @@ public class Ejemplo17 {
                 break;
 
             case "Febrero":
-                System.out.println("28 días");
+                System.out.println("28 días o 29 si el año fuera bisiesto");
                 break;
 
             case "Marzo":

@@ -4,7 +4,7 @@ public class Ejemplo6 {
         int radius;
         final double PI = 3.14159;
         double length, area;
-        System.out.println("Pon el radio:");
+        System.out.println("Enter the radius:");
 
         Scanner inputValue;
         inputValue = new Scanner(System.in);
