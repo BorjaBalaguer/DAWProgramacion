@@ -19,28 +19,22 @@ public class Ejemplo13 {
 
         if (orden.equals("Ascendente")){
             System.out.println("-------------");
-            if(valor1 > valor2){
+            if(valor1 >= valor2){
                 System.out.println(valor1 );
                 System.out.println(valor2);
-            }else if (valor2 > valor1) {
+            }else{
                 System.out.println(valor2 );
                 System.out.println(valor1);
-            }else{
-            System.out.println("-------------");
-            System.out.println(valor1 + "=" + valor2);
             }
             
         }else if (orden.equals("Descendente")){
             System.out.println("-------------");
-            if(valor1 > valor2){
+            if(valor1 >= valor2){
                 System.out.println(valor2);
                 System.out.println(valor1);
-            }else if (valor2 > valor1){
-                System.out.println(valor1);
-                System.out.println(valor2);
             }else{
-                System.out.println("-------------");
-                System.out.println(valor1 + "=" + valor2);
+                System.out.println(valor1);
+                System.out.println(valor2);
             }
         }else{
             System.out.println("-------------");
