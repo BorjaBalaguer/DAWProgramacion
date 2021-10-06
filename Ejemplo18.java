@@ -2,11 +2,10 @@ import java.util.Scanner;
 public class Ejemplo18 {
   public static void main(String[] args) {
     int horasTotales, minutosTotales, segundosTotales, segundosRestantesHoras, segundosRestantesMinutos;
-       
+    Scanner inputValue = new Scanner(System.in);
+    
         //Aqui llamamos al scanner para poder guardar tres valores.
         System.out.println("Dame unas horas");
-        Scanner inputValue;
-        inputValue = new Scanner(System.in);
         int horas = inputValue.nextInt();
         
         System.out.println("Dame unos minutos");
