@@ -12,19 +12,17 @@ public class Ejemplo11 {
 
         System.out.println("Pon el segundo valor");
         valor2 = inputValue.nextInt();
-
-        if (valor1 > valor2){
-            System.out.println("-------------" );
+        
+        System.out.println("-------------" );
+        if (valor1 >= valor2){
+            
             System.out.println(valor1 );
             System.out.println(valor2);
-        }else if (valor2 > valor1){
-            System.out.println("-------------" );
+        }else{
             System.out.println(valor2 );
             System.out.println(valor1 );
-        }else{
-            System.out.println("-------------" );
-            System.out.println(valor1 + "=" + valor2);
         }
+        
 
 
         inputValue.close();

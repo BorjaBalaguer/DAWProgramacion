@@ -1,12 +1,12 @@
 import java.util.Scanner;
 public class Ejemplo10 {
     public static void main (String argv[]) {
-        int valor;
+        double valor;
         System.out.println("Pon un valor:");
 
         Scanner inputValue;
         inputValue = new Scanner(System.in);
-        valor = inputValue.nextInt();
+        valor = inputValue.nextDouble();
 
         if (valor >= 0){
             System.out.println("Positivo");
