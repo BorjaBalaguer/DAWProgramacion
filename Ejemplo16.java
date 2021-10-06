@@ -6,17 +6,14 @@ public class Ejemplo16 {
         int num1, num2;
         String op;
         
-        System.out.println("Enter the number 1:");
-
         Scanner inputValue;
         inputValue = new Scanner(System.in);
+        
+        System.out.println("Enter the number 1:");
         num1 = inputValue.nextInt();
 
         System.out.println("Enter the number 2:");
-
-        Scanner inputValue2;
-        inputValue2 = new Scanner(System.in);
-        num2 = inputValue2.nextInt();
+        num2 = inputValue.nextInt();
 
         System.out.println("Que operacion quieres hacer?(+,-,*,/)");
 
@@ -24,7 +21,6 @@ public class Ejemplo16 {
         op = miScanner.next();
 
         inputValue.close();
-        inputValue2.close();
         miScanner.close();
 
         switch (op) {
