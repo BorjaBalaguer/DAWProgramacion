@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class Ejemplo22 {
+public class Ejemplo23 {
     public static void main(String[] args) {
         
-        int i, num, positivos;
+        int num, positivos;
 
         Scanner inputValue;
         inputValue = new Scanner(System.in);
@@ -12,9 +12,8 @@ public class Ejemplo22 {
         System.out.println("Introduce un numero:");
         num = inputValue.nextInt();
 
-        i = 0;
         positivos = 0;
-        while (i < 10) {
+        while (num != 0) {
 
             num = inputValue.nextInt();
 
@@ -23,7 +22,6 @@ public class Ejemplo22 {
                 positivos = positivos + 1;
 
             }
-        i = i + 1;
         }
         inputValue.close();
         System.out.println("-------------------");
