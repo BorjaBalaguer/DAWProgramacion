@@ -9,19 +9,18 @@ public class Ejemplo23 {
         inputValue = new Scanner(System.in);
         
         //Inicio de programa
-        System.out.println("Introduce un numero:");
+        System.out.println("Introduce numeros, y el 0 para acabar");
         num = inputValue.nextInt();
 
         positivos = 0;
         while (num != 0) {
-
-            num = inputValue.nextInt();
 
             if (num >= 0) {
 
                 positivos = positivos + 1;
 
             }
+            num = inputValue.nextInt();
         }
         inputValue.close();
         System.out.println("-------------------");
