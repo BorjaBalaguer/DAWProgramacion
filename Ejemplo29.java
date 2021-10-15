@@ -5,23 +5,21 @@ public class Ejemplo29 {
         int numero, divisor = 2;
         boolean esPrimo = true;
 
-        Scanner lector;
-        lector = new Scanner(System.in);
-
-        System.out.println("Escribeme el numero para saber si es primo o no: ");
-        numero = lector.nextInt();
-
-        while ((divisor < numero) && esPrimo) {
-            if ((numero % divisor) == 0) {
+        for (int i = 3; i <= 100; i++) {
+        divisor = 2;
+        esPrimo = true;
+            while ((divisor < i) && esPrimo) {
+                
+            if ((i % divisor) == 0) {
                 esPrimo = false;
             }
             divisor ++;
+            }
+
+            if (esPrimo == true) {
+                System.out.println(i);
+            }
         }
-        if (esPrimo) {
-            System.out.println("El numero " + numero + " es primo");
-        }else{
-            System.out.println("El numero " + numero + " no es primo");
-        }
-        lector.close();
+    
     }
 }
