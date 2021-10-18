@@ -1,10 +1,10 @@
-import java.util.Scanner;
 public class Ejemplo29 {
     public static void main(String[] args) {
-        
-        int numero, divisor = 2;
+        //Definicion de variables
+        int divisor = 2;
         boolean esPrimo = true;
 
+        //Inicio programa
         for (int i = 3; i <= 100; i++) {
         divisor = 2;
         esPrimo = true;
@@ -20,6 +20,5 @@ public class Ejemplo29 {
                 System.out.println(i);
             }
         }
-    
     }
 }

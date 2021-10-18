@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Ejemplo26 {
     public static void main(String[] args) {
-        //Inicializacion de variables
+        //Definicion de variables
         int numero, multiplicacion = 0, resultado;
         Scanner escaner;
         escaner = new Scanner(System.in);

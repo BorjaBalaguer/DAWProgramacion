@@ -4,13 +4,13 @@ public class Ejemplo20 {
         //Declaracion de variables
         double precio, precioFinal;
 
-        Scanner inputValue;
-        inputValue = new Scanner(System.in);
+        Scanner lector;
+        lector = new Scanner(System.in);
         
         //Inicio de programa
         System.out.println("Introduce el precio:");
-        precio = inputValue.nextDouble();
-        inputValue.close();
+        precio = lector.nextDouble();
+        lector.close();
 
         if (precio < 6) {
             precioFinal = precio;

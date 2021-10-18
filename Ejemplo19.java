@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class Ejemplo19 {
     public static void main(String[] args) {
+        //Definicion de variables
         int horas, horasExtras;
         double precioH, pagoBruto, pagoNeto, impuestos;
 
@@ -13,7 +14,8 @@ public class Ejemplo19 {
         horas = inputValue.nextInt();
 
         inputValue.close();
-        
+
+        //Inicio programa
         if(horas <= 35){
             pagoBruto = horas * precioH;
         }else{
@@ -21,13 +23,13 @@ public class Ejemplo19 {
             pagoBruto = (((precioH * 1.5) * horasExtras) + (precioH * 35));     
         }
 
-            if(pagoBruto <= 500){
-                pagoNeto = pagoBruto;
-            }else if(pagoBruto <= 900){
-                pagoNeto = pagoBruto * 0.75;
-            }else{
-                pagoNeto = pagoBruto * 0.55;
-            }
+        if(pagoBruto <= 500){
+             pagoNeto = pagoBruto;
+        }else if(pagoBruto <= 900){
+            pagoNeto = (pagoBruto - 500) * 0.75;
+        }else{
+            pagoNeto = pagoBruto * 0.55;
+        }
             
             impuestos = pagoBruto - pagoNeto;
 
@@ -35,6 +37,5 @@ public class Ejemplo19 {
             System.out.println("Pago neto: " + pagoNeto);
             System.out.println("Pago bruto: " + pagoBruto);
             System.out.println("Impustos: " + impuestos);
-
     }
 }

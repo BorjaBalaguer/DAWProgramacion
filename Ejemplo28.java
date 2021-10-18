@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Ejemplo28 {
     public static void main(String[] args) {
-        //Inicializacion de variables
+        //Definicion de variables
         int numero, divisor = 2;
         boolean esPrimo = true;
 
