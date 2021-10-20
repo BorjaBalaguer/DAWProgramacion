@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Ejemplo22 {
     public static void main(String[] args) {
-        
+        //Declaracion de variables
         int i, num, positivos;
 
         Scanner inputValue;
@@ -20,10 +20,10 @@ public class Ejemplo22 {
 
             if (num >= 0) {
 
-                positivos = positivos + 1;
+                positivos += 1;
 
             }
-        i = i + 1;
+        i += 1;
         }
         inputValue.close();
         System.out.println("-------------------");
