@@ -9,9 +9,15 @@ public class Ejemplo32 {
 
         anArray = new int[10];
 
+        System.out.println("Dame 10 numeros: ");
         for (int i = 0; i < anArray.length ;i++) {
-            System.out.println("Dame 10 numeros diferentes: ");
             anArray[i] = lector.nextInt();
         }
+        System.out.println("----------------------");
+        for (int j = 9; j >=0 ;j--) {
+            
+            System.out.println(anArray[j]);
+        }
+        lector.close();
     }
 }
