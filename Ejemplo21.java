@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Ejemplo21 {
      public static void main(String[] args) {
-         
+        //Declaracion de variables 
         int año ;
         Scanner inputValue;
         inputValue = new Scanner(System.in);

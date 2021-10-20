@@ -17,7 +17,7 @@ public class Ejemplo30 {
 
         for (int i = 0; i < mitad ;i++) {
             char caracter1 = palabra.charAt(0);
-            char caracter2 = palabra.charAt(longitud)-1-i);
+            char caracter2 = palabra.charAt(longitud -i);
         }
     }
 }
