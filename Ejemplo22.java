@@ -9,13 +9,11 @@ public class Ejemplo22 {
         inputValue = new Scanner(System.in);
         
         //Inicio de programa
-        System.out.println("Introduce un numero:");
-        num = inputValue.nextInt();
-
         i = 0;
         positivos = 0;
-        while (i < 10) {
 
+        System.out.println("Introduce un numero:");
+        while (i < 10) {
             num = inputValue.nextInt();
 
             if (num >= 0) {
