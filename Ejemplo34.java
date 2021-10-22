@@ -8,12 +8,12 @@ public class Ejemplo34 {
         Scanner lector;
         lector = new Scanner(System.in);
 
-        System.out.println("Escribe tu DNI sin la letra: ");
+        System.out.println("Escribe tu NIE sin en digito de control: ");
         numero = lector.nextInt();
 
         resto = numero % 23;
 
-        System.out.println(anArray[resto]);
+        System.out.println(numero + "" + anArray[resto]);
 
         lector.close();
     }

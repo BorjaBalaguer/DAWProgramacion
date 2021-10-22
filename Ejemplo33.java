@@ -14,7 +14,8 @@ public class Ejemplo33 {
 
         resto = numero % 23;
 
-        System.out.println(anArray[resto]);
+        System.out.println("----------------------");
+        System.out.println(numero + "" + anArray[resto]);
 
         lector.close();
     }
