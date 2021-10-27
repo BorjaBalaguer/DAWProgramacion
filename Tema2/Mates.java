@@ -25,16 +25,10 @@ public class Mates {
 
         return resultado;
     }
-    public static void main(String[] args) {
+    public static double area (double x, double PI){
+        double resultado = 0;
+        resultado = ( x * x ) * PI;
 
-        System.out.println("---------------------");
-        System.out.println("Suma: " + suma(2,4));
-        System.out.println("---------------------");
-        System.out.println("Resta: " + resta(2,4));
-        System.out.println("---------------------");
-        System.out.println("Multiplicacion: " + multiplicacion(2,4));
-        System.out.println("---------------------");
-        System.out.println("Division: " + division(2,4));
-
+        return resultado;
     }
 }
