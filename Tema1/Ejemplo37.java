@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ejemplo36 {
+public class Ejemplo37 {
     public static void main(String[] args) {
 
         double[] numeros = new double[10];
@@ -20,6 +20,14 @@ public class Ejemplo36 {
             }
         }
 
+        double minimo = numeros[0];
+
+        for (int k = 1; k < numeros.length; k++) {
+            if (numeros[k] < minimo) {
+                minimo = numeros[k];
+            }
+        }
         System.out.println("El numero maximo es: " + maximo);
+        System.out.println("El numero minimo es: " + minimo);
     }
 }
