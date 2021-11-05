@@ -8,5 +8,7 @@ public class E01 {
         System.out.print("Ingrese su nombre: ");
         nombre = lector.nextLine();
         System.out.println("Hola, " + nombre);
+
+        lector.close();
    } 
 }
