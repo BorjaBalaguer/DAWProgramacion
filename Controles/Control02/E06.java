@@ -13,5 +13,6 @@ public class E06 {
         hipotenusa = (catetoA * catetoA) + (catetoB * catetoB); 
 
         System.out.println("La hipotenusa es " + Math.sqrt(hipotenusa));
+        lector.close();
     }
 }

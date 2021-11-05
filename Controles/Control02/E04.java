@@ -11,5 +11,6 @@ public class E04 {
 
         pulgadas = longitud * 0.39370;
         System.out.println(longitud + " cm = " + pulgadas + " in");
+        lector.close();
     }
 }

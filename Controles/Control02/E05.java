@@ -7,5 +7,6 @@ public class E05 {
 
         System.out.println("Ingrese un numero: ");
         numero = lector.nextInt();
+        lector.close();
     }
 }
