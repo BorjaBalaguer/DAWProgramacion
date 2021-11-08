@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
         "Tema1",
-        "Controles/Control02"
+        "Controles/Control02",
+        "Tema2/Ejercicios"
     ]
 }

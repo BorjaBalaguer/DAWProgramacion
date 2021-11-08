@@ -29,5 +29,6 @@ public class Ejemplo37 {
         }
         System.out.println("El numero maximo es: " + maximo);
         System.out.println("El numero minimo es: " + minimo);
+        lector.close();
     }
 }

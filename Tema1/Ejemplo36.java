@@ -21,5 +21,6 @@ public class Ejemplo36 {
         }
 
         System.out.println("El numero maximo es: " + maximo);
+        lector.close();
     }
 }
