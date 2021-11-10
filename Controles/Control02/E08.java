@@ -2,14 +2,11 @@ import java.util.Scanner;
 
 public class E08 {
     public static void main(String[] args) {
-        double numero = 0, decimal = 0;
+        System.out.print("Ingrese un numero: ");
         Scanner lector = new Scanner(System.in);
-
-        System.out.println("Ingrese un numero: ");
-        numero = lector.nextInt();
-
-        decimal = decimal - Math.trunc(numero);
-
-        System.out.println(decimal);
+        double numero = lector.nextDouble();
+        lector.close();
+        double parteDecimal = numero % 1;
+        System.out.println(parteDecimal);
     }
 }
