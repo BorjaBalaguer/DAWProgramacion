@@ -1,11 +1,19 @@
 public class Duplicados {
     public static void main(String[] args) {
-       int[] valores ={10,12,16,14,10,14,18}; 
+       int[] valores = new int [6];
+       int[] valores2 = new int [6]; 
 
         
+
+
+
         for (int i = 0;i < valores.length; i++ ) {
-            if (valores[0] == valores[i]) {
-                System.out.println(valores[i]); 
+            for (int j = i +1;j < valores.length; j++ ) {
+                if (valores[i] == valores[j]) {
+                   
+                    System.out.println(valores[i]);
+            
+                }    
             }
         }
     }
