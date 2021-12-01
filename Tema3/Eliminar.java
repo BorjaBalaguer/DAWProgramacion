@@ -8,9 +8,7 @@ public class Eliminar {
             indice = Utilidades.leerEntero("El valor introducido es mayor al admitido (del 0 al 5)");
         }while((indice > (elementos.length - 1) || (indice < 0)));
         
-        for (int i = indice + 1; i < elementos.length; i++) {
-             elementos[i - 1] = elementos[i];
-        }
+        
 
         elementos[elementos.length - 1] = 0;   
 
