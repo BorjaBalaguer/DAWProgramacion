@@ -29,6 +29,7 @@ class Ejemplo47 {
         System.out.println("*********");
 
 
+        miScanner.close();
     }
 
 }
