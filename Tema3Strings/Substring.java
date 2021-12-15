@@ -1,9 +1,9 @@
 public class Substring {
     public static void main(String[] args) {
-        String cadena1 = Utilidades.leerCadena("Dame la cadena1");
-        int inicio = Utilidades.leerEntero("Dame la letra que quieres eliminar");
-        int final = Utilidades.leerEntero("Dame la letra por la que quieres que sea sustituida");
+        String cadena1 = Utilidades.leerCadena("Dame la cadena");
+        int inicio = Utilidades.leerEntero("Dame la posicion inicial de la cadena que quieres eliminar");
+        int fin = Utilidades.leerEntero("Dame la posicion final de la cadena que quieres eliminar");
         
-        System.out.println("Resultado final: " + cadena1.substring(inicio, final));
+        System.out.println("Cadena extraida: " + cadena1.substring(inicio, fin));
     }
 }

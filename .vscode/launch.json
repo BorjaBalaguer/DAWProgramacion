@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Digitos2",
+            "request": "launch",
+            "mainClass": "Digitos2",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
+            "name": "Launch Digitos",
+            "request": "launch",
+            "mainClass": "Digitos",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
+            "name": "Launch Longitud3",
+            "request": "launch",
+            "mainClass": "Longitud3",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
+            "name": "Launch Longitud2",
+            "request": "launch",
+            "mainClass": "Longitud2",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
+            "name": "Launch Longitud",
+            "request": "launch",
+            "mainClass": "Longitud",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
