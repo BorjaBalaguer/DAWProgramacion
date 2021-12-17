@@ -1,26 +1,20 @@
 public class Digitos2 {
     public static void main(String[] args) {
         String cadena = Utilidades.leerCadena("Dame la cadena:");
-        String palabras[] = Utilidades.dividirEnPalabras(cadena);
-        System.out.println("Hay: " + numeros(cadena, palabras) + " numeros en la cadena.");
+        System.out.println("Hay: " + numeros(cadena) + " numeros en la cadena.");
           
     }
 
-    public static int numeros(String cadena , String[] palabras) {
+    public static int numeros(String cadena) {
         int contador = 0;
-        int digitosnumeros = 0;
-        for (int i = 0; i < palabras.length; i++) {
-            for (int j = 0; j < palabras[i].length(); j++) {
-                digitosnumeros = 0;
-                if (Character.isDigit(palabras[i].charAt(j))){
-                    digitosnumeros++;
-                }else{
-                    break;
-                }
-                if (digitosnumeros == palabras[i].length()) {
+
+            for (int j = 0; j < cadena.length(); j++) {
+                if (Character.isDigit(cadena.charAt(j))){
                     contador++;
+                    if (Character.isDigit(cadena.charAt(j -1))) {
+                        contador--;
+                    }
                 }
-            }
         }
         return contador;
     }
