@@ -1,36 +1,34 @@
+import java.util.Scanner;
+
 public class chorrichat {
+
+    final static int SIN_SALUDO = 0;
+    final static int SALUDO_ = 1;
+    final static int BUCLE = 2;
+    final static int FIN = 3;
     public static void main(String[] args) {
-        String cadena = Utilidades.leerCadena("ChorriChat  -->");
-        boolean aSaludado = saludo(cadena);
+       
+        Scanner lector = new Scanner(System.in);
 
-        while(!aSaludado) {
-            System.out.println("Eres una persona maleducada");
-            cadena = Utilidades.leerCadena("ChorriChat  -->");
+        int estado = SIN_SALUDO;
+
+        while(estado != FIN) {
+            System.out.println("Chorrichat -->");
+           String frase = lector.nextLine().toLowerCase();
+           estado = updateEstado(estado, frase);
+           imprimirfrase(estado);
         }
-        System.out.println("Hola soy Chorri tu asistente");
+        
+        lector.close();
         
     }
 
-    public static boolean saludo(String cadena) {
-        String[] palabraSaludo = Utilidades.dividirEnPalabras(cadena);
-        boolean resultado = false;
-
-        switch (palabraSaludo[0]) {
-            case "hola":
-            case "buenos":
-                if (palabraSaludo[1] == "dias") {
-                    resultado = true;
-                }
-            case "buenas":
-                resultado = true;
-
-                break;
-
-            default:
-                resultado = false;
-                break;
-        }
-        
-        return resultado;
+    public static void imprimirfrase(int estado) {
     }
+
+    public static int updateEstado(int estado, String frase) {
+        return 0;
+    }
+
+    
 }
