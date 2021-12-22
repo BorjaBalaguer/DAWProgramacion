@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch chorrichat",
+            "request": "launch",
+            "mainClass": "chorrichat",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
             "name": "Launch Calculadora",
             "request": "launch",
             "mainClass": "Calculadora",
