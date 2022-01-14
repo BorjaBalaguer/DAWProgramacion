@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch AlumnoTest",
+            "request": "launch",
+            "mainClass": "Tema5.AlumnoTest",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
             "name": "Launch Alumno",
             "request": "launch",
             "mainClass": "Alumno",
