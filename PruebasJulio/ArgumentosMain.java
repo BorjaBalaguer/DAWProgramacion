@@ -1,3 +1,5 @@
+package PruebasJulio;
+
 public class ArgumentosMain {
     public static void main(String[] args) {
         System.out.println("--------------------------");
