@@ -1,0 +1,12 @@
+<? xml version"1.0" encoding"UTF-8"?>
+<!DOCTYPE filmoteca SYSTEM "peliculas_dtd_1.dtd">
+<?xml-stylesheet type="text/css" href="Peliculas.css"
+
+<filmoteca>
+    <peliculas>
+        <titulo>Brazil></titulo>
+        <estreno>1985</estreno>
+        <duracion>142 minutos</duracion>
+        <director>Terrey Gillian</director>
+    </peliculas>
+</filmoteca>

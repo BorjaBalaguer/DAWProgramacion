@@ -7,15 +7,20 @@ public class TicketMachine2 {
      private int balance;
      // The total amount of money collected by this machine.
      private int total;
+
+     private int discount;
  
      //1
-     public void emptyMachine(){
-
+     public int emptyMachine(){
+        int acum = total;
+        total = 0;
+        return acum;
      }
-     public void printTicket(){
-         
-     }
 
+     //3
+     public void setDiscount(){
+       ;
+     }
 
      /**
       * Create a machine that issues tickets of the given price.
@@ -25,9 +30,22 @@ public class TicketMachine2 {
          price = cost;
          balance = 0;
          total = 0;
+         discount = 0;
      }
        
-     /**
+     public int getDiscount() {
+        return discount;
+    }
+
+    public void setDiscount(int discount) {
+        this.discount = 20;
+    }
+
+    public void resetDiscount(){
+        this.discount = 0;
+    }
+
+    /**
       * @Return The price of a ticket.
       */
      public int getPrice()
@@ -66,23 +84,27 @@ public class TicketMachine2 {
       */
      public void printTicket()
      {
-         if(balance >= price) {
+        int actuaPrice = price * (100 - discount)/100;
+        int amountToPay = actuaPrice - balance;
+
+
+         if(amountToPay <=0) {
              // Simulate the printing of a ticket.
              System.out.println("##################");
              System.out.println("# The BlueJ Line");
              System.out.println("# Ticket");
-             System.out.println("# " + price + " cents.");
+             System.out.println("# " + actuaPrice + " cents.");
              System.out.println("##################");
              System.out.println();
  
              // Update the total collected with the price.
-             total = total + price;
+             total = total + actuaPrice;
              // Reduce the balance by the price.
-             balance = balance - price;
+             balance = balance - actuaPrice;
          }
          else {
              System.out.println("You must insert at least: " +
-                                (price - balance) + " more cents.");
+                                (amountToPay) + " more cents.");
                      
          }
      }
