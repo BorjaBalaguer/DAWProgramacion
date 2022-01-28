@@ -1,5 +1,5 @@
 filmoteca {
-    background: #413e20;
+    background: #000000;
     font-size: medium;
     display: block;
 }
@@ -14,12 +14,13 @@ titulo {
     display: block;
     font-size: 18pt;
     font-weight: bold;
+    color: red;
 }
 estreno, duracion{
     display: block;
     text-indent: 2em;
     font-size: 10pt;
-    color: blue;
+    color: rgb(255, 255, 255);
 }
 director{
     display: block;
@@ -27,4 +28,59 @@ director{
     text-indent: 2em;
     color: green;
     font-size: 12pt;
+}
+
+#pelicula1{
+    position: relative;
+    background-color: #000000;
+}
+
+portada[imagen="1"]{
+    display: block;
+    background-image: url(pelicula1.jpg);
+    width: 190px;
+    height: 281px;
+    margin-right: 10px;
+
+}
+#pelicula2{
+    position: relative;
+    background-color: #000000;
+}
+
+portada[imagen="2"]{
+    display: block;
+    background-image: url(pelicula2.jpg);
+    width: 190px;
+    height: 269px;
+    margin-right: 10px;
+
+}
+
+#pelicula3{
+    position: relative;
+    background-color: #000000;
+}
+
+portada[imagen="3"]{
+    display: block;
+    background-image: url(pelicula3.jpg);
+    width: 190px;
+    height: 285px;
+    margin-right: 10px;
+
+}
+
+#pelicula4{
+    position: relative;
+    background-color: #000000;
+}
+
+portada[imagen="4"]{
+    display: block;
+    background-image: url(pelicula4.jpg);
+    width: 190px;
+    height: 271px;
+    margin-right: 10px;
+
 }
