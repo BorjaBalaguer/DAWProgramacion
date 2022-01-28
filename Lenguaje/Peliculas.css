@@ -1,0 +1,30 @@
+filmoteca {
+    background: #413e20;
+    font-size: medium;
+    display: block;
+}
+
+peliculas{
+    display: block;
+    font-size: 10pt;
+    margin-top: 10px;
+}
+
+titulo {
+    display: block;
+    font-size: 18pt;
+    font-weight: bold;
+}
+estreno, duracion{
+    display: block;
+    text-indent: 2em;
+    font-size: 10pt;
+    color: blue;
+}
+director{
+    display: block;
+    font-style: italic;
+    text-indent: 2em;
+    color: green;
+    font-size: 12pt;
+}

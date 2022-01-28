@@ -1,12 +1,30 @@
-<? xml version"1.0" encoding"UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE filmoteca SYSTEM "peliculas_dtd_1.dtd">
-<?xml-stylesheet type="text/css" href="Peliculas.css"
+<?xml-stylesheet type="text/css" href="Peliculas.css"?>
 
 <filmoteca>
     <peliculas>
-        <titulo>Brazil></titulo>
-        <estreno>1985</estreno>
-        <duracion>142 minutos</duracion>
-        <director>Terrey Gillian</director>
+        <titulo>La milla verde</titulo>
+        <estreno>1999</estreno>
+        <duracion>180 minutos</duracion>
+        <director>Frank Darabont</director>
+    </peliculas>
+    <peliculas>
+        <titulo>Lo imposible</titulo>
+        <estreno>2012</estreno>
+        <duracion>113 minutos</duracion>
+        <director>Juan Antonio Bayona</director>
+    </peliculas>
+    <peliculas>
+        <titulo>Terminator 2</titulo>
+        <estreno>1991</estreno>
+        <duracion>139 minutos</duracion>
+        <director>James Cameron</director>
+    </peliculas>
+    <peliculas>
+        <titulo>Celda 211</titulo>
+        <estreno>2009</estreno>
+        <duracion>110 minutos</duracion>
+        <director>Daniel Monzón</director>
     </peliculas>
 </filmoteca>
