@@ -8,7 +8,7 @@ public class Book {
     private int pages;
     private String refNumber;
     private int borrowed;
-    private boolean courseText;
+    private final boolean courseText;
 
     public int getPages() {
         return pages;

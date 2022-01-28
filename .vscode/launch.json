@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HeaterTest",
+            "request": "launch",
+            "mainClass": "Tema5.HeaterTest",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
             "name": "Launch BookTest",
             "request": "launch",
             "mainClass": "Tema5.BookTest",
