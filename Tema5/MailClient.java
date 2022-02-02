@@ -48,7 +48,26 @@ public class MailClient {
       */
      public void sendMailItem(String to, String subject, String message)
      {
-         MailItem item = new MailItem(user, to, subject, message);
-         server.post(item);
+        String[] split = to.split(";");
+
+        for (int i = 0; i < split.length; i++) {
+            MailItem item = new MailItem(user, split[i], subject, message);
+            server.post(item);
+        }
+        
+     }
+
+     public void forwardLastMailItem(String forwardTo){
+         
+        sendMailItem(forwardTo, "Last", "Last");
+         
+        MailItem item = server.getNextMailItem(user);
+         
+        if(item == null) {
+            System.out.println("No new mail.");
+        }
+        else {
+            item.print();
+        }
      }
 }

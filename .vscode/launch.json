@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MailTest",
+            "request": "launch",
+            "mainClass": "Tema5.MailTest",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
             "name": "Launch ClockDisplayTest",
             "request": "launch",
             "mainClass": "Tema5.ClockDisplayTest",
