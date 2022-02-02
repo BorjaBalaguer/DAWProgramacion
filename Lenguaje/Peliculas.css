@@ -15,12 +15,14 @@ titulo {
     font-size: 18pt;
     font-weight: bold;
     color: red;
+    margin-left: 15px;
 }
 estreno, duracion{
     display: block;
     text-indent: 2em;
     font-size: 10pt;
     color: rgb(255, 255, 255);
+    margin-left: 45px;
 }
 director{
     display: block;
@@ -28,11 +30,14 @@ director{
     text-indent: 2em;
     color: green;
     font-size: 12pt;
+    margin-left: 15px;
 }
 
 #pelicula1{
     position: relative;
     background-color: #000000;
+    margin-left: 200px;
+    margin-top: 150px;
 }
 
 portada[imagen="1"]{
@@ -40,12 +45,15 @@ portada[imagen="1"]{
     background-image: url(pelicula1.jpg);
     width: 190px;
     height: 281px;
-    margin-right: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
 
 }
 #pelicula2{
     position: relative;
     background-color: #000000;
+    margin-left: 550px;
+    margin-top: 15px;
 }
 
 portada[imagen="2"]{
@@ -53,13 +61,16 @@ portada[imagen="2"]{
     background-image: url(pelicula2.jpg);
     width: 190px;
     height: 269px;
-    margin-right: 10px;
+    margin-left: 150px;
+    margin-top: -370px;
 
 }
 
 #pelicula3{
     position: relative;
     background-color: #000000;
+    margin-left: 200px;
+    margin-top: 150px;
 }
 
 portada[imagen="3"]{
@@ -74,6 +85,8 @@ portada[imagen="3"]{
 #pelicula4{
     position: relative;
     background-color: #000000;
+    margin-left: 550px;
+    margin-top: 15px;
 }
 
 portada[imagen="4"]{
@@ -82,5 +95,7 @@ portada[imagen="4"]{
     width: 190px;
     height: 271px;
     margin-right: 10px;
+    margin-left: 150px;
+    margin-top: -370px;
 
 }

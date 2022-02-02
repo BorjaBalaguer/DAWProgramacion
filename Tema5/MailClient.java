@@ -1,5 +1,7 @@
 package Tema5;
 
+import javax.security.auth.Subject;
+
 public class MailClient {
      // The server used for sending and receiving.
      private MailServer server;
@@ -44,9 +46,9 @@ public class MailClient {
       *  The intended recipient.
       *  The text of the message to be sent.
       */
-     public void sendMailItem(String to, String message)
+     public void sendMailItem(String to, String subject, String message)
      {
-         MailItem item = new MailItem(user, to, message);
+         MailItem item = new MailItem(user, to, subject, message);
          server.post(item);
      }
 }
