@@ -11,6 +11,8 @@ public class Ordenador{
     public Ordenador(String formato, String color, Teclado teclado) {
         if (formato == "Sobremesa" || formato == "Inalambrico") {
             this.formato = formato;
+        }else{
+            this.formato = "El formato tiene que ser Sobremesa o Inalambrico";
         }
         this.color = color;
         this.teclado = teclado;
