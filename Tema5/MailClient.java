@@ -48,26 +48,27 @@ public class MailClient {
       */
      public void sendMailItem(String to, String subject, String message)
      {
-        String[] split = to.split(";");
+        String[] nombres = to.split(";");
 
-        for (int i = 0; i < split.length; i++) {
-            MailItem item = new MailItem(user, split[i], subject, message);
+        for (String nombre : nombres) {
+            MailItem item = new MailItem(user, nombre, subject, message);
             server.post(item);
+            System.out.println("Correo enviado a " + nombre);
         }
         
      }
 
      public void forwardLastMailItem(String forwardTo){
          
-        sendMailItem(forwardTo, "Last", "Last");
-         
         MailItem item = server.getNextMailItem(user);
          
         if(item == null) {
-            System.out.println("No new mail.");
+            System.out.println("No new mail to forward.");
         }
         else {
             item.print();
+            MailItem nuevo = new MailItem(item.getFrom(),forwardTo,item.getSubject(),item.getMessage());
+            server.post(item);
         }
      }
 }

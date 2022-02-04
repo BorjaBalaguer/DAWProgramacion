@@ -1,4 +1,4 @@
-package Controles;
+package Controles.Control01;
 
 import java.util.Scanner;
 
