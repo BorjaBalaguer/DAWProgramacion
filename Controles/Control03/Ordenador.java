@@ -5,7 +5,7 @@ public class Ordenador{
     private String formato;
     private String color;
     private Teclado teclado;
-    private Ordenador union;
+    private Ordenador union = null;
 
     
     public Ordenador(String formato, String color, Teclado teclado) {
