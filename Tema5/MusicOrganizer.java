@@ -12,7 +12,7 @@ public class MusicOrganizer
 {
     // An ArrayList for storing the file names of music files.
     private ArrayList<String> files;
-    private boolean esValido;
+    private static boolean esValido;
         
     /**
      * Create a MusicOrganizer

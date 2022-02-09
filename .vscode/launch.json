@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MusicOrganizerTest",
+            "request": "launch",
+            "mainClass": "Tema5.MusicOrganizerTest",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
             "name": "Launch TestControl03",
             "request": "launch",
             "mainClass": "Controles.Control03.TestControl03",
