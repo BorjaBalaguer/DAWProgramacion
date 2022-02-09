@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.ClockDisplay;
 
 public class ClockDisplayTest {
     public static void main(String[] args) {

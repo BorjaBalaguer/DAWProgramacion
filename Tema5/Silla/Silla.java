@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.Silla;
 
 import java.awt.Point;
 

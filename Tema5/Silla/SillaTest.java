@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.Silla;
 
 public class SillaTest {
     public static void main(String[] args) {

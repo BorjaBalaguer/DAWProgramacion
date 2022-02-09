@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.Mail;
 
 
 import java.util.ArrayList;

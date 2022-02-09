@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.Heater;
 
 public class Heater {
 

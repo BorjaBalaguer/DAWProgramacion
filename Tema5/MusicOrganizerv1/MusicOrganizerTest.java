@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.MusicOrganizerv1;
 
 public class MusicOrganizerTest {
     public static void main(String[] args) {

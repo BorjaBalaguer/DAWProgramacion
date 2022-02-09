@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.Alumno;
 /*Crearemos una clase de tipo alumnno que tendra como atributos un ID, nombre y un grupo
 Se pueden crear alumnos solo con el nombre i el ID o tambien con todo
 Tiene que tener un metodo que se llamara preguntarDuda que tendra que imprimir el nombre del alumno mas "levanta la mano"

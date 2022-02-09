@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.Mail;
 
 public class MailItem {
     // The sender of the item.

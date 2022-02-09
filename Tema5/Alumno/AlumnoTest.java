@@ -1,4 +1,5 @@
-package Tema5;
+package Tema5.Alumno;
+
 public class AlumnoTest {
     
     public static void main(String[] args) {

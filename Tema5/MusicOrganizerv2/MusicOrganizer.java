@@ -1,9 +1,10 @@
-package Tema5;
+package Tema5.MusicOrganizerv2;
 
 import java.util.ArrayList;
 
 /**
  * A class to hold details of audio files.
+ * This version can play the files.
  * 
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
@@ -12,7 +13,8 @@ public class MusicOrganizer
 {
     // An ArrayList for storing the file names of music files.
     private ArrayList<String> files;
-    private static boolean esValido;
+    // A player for the music files.
+    private MusicPlayer player;
         
     /**
      * Create a MusicOrganizer
@@ -20,6 +22,7 @@ public class MusicOrganizer
     public MusicOrganizer()
     {
         files = new ArrayList<>();
+        player = new MusicPlayer();
     }
     
     /**
@@ -46,7 +49,7 @@ public class MusicOrganizer
      */
     public void listFile(int index)
     {
-        if(isValidIndex(index) == true ) {
+        if(index >= 0 && index < files.size()) {
             String filename = files.get(index);
             System.out.println(filename);
         }
@@ -58,24 +61,27 @@ public class MusicOrganizer
      */
     public void removeFile(int index)
     {
-        if(isValidIndex(index) == true ) {
+        if(index >= 0 && index < files.size()) {
             files.remove(index);
         }
     }
 
-    public void checkIndex(int indice){
-        if(indice >= 0 && indice < files.size()) {
-        }else {
-            System.out.println("El indice maximo es: " + files.size());
-        }
+    /**
+     * Start playing a file in the collection.
+     * Use stopPlaying() to stop it playing.
+     * @param index The index of the file to be played.
+     */
+    public void startPlaying(int index)
+    {
+        String filename = files.get(index);
+        player.startPlaying(filename);
     }
 
-    public boolean isValidIndex(int indice){
-        if(indice >= 0 && indice < files.size()) {
-            return esValido = true;
-        }else {
-            return esValido = false;
-        }
+    /**
+     * Stop the player.
+     */
+    public void stopPlaying()
+    {
+        player.stop();
     }
-
 }

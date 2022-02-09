@@ -1,4 +1,5 @@
-package Tema5;
+package Tema5.TicketMachine;
+
 public class TestTicketMachine {
     public static void main(String[] args) {
         TicketMachine maquina = new TicketMachine();

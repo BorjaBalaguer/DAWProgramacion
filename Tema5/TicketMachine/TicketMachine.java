@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.TicketMachine;
 public class TicketMachine{
     // The price of a ticket from this machine.
     private int price;

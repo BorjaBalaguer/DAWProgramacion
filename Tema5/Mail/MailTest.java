@@ -1,4 +1,4 @@
-package Tema5;
+package Tema5.Mail;
 
 public class MailTest {
     public static void main(String[] args) {
