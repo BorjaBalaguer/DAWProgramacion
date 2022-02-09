@@ -54,6 +54,50 @@ public class MusicOrganizer
             System.out.println(filename);
         }
     }
+
+    public void listAllFiles(){
+        for (String filename : files) {
+            System.out.println(filename);
+        }
+    }
+
+    public void listMatching(String match){
+        boolean contain = false;
+        for (String filename : files) {
+            if (filename.contains(match)) {
+                System.out.println(filename);
+                contain = true;
+            }else{
+                if (!contain) {
+                    System.out.println("No se ha encontrado ninguna cancion con esa cadena");
+                }
+            }
+        }
+    }
+
+    public void playMatching(String match){
+        getMatching(match);
+       
+        for (String filename : files) {
+            if (filename.contains(match)) {
+                System.out.println(filename);
+                this.player.playSample(filename);
+            }
+        }
+    }
+
+    public ArrayList<String> getMatching(String match){
+      
+        ArrayList<String> files2;
+        files2 = new ArrayList<>();
+
+        for (String filename : files) {
+            if (filename.contains(match)) {
+                files2.add(filename);
+            }
+        }
+        return files2;
+    }
     
     /**
      * Remove a file from the collection.
