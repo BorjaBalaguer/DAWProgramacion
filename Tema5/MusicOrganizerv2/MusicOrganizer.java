@@ -62,27 +62,23 @@ public class MusicOrganizer
     }
 
     public void listMatching(String match){
-        boolean contain = false;
-        for (String filename : files) {
-            if (filename.contains(match)) {
+        for (String filename : getMatching(match)) {
                 System.out.println(filename);
-                contain = true;
-            }else{
-                if (!contain) {
+        }      
+           
+        if (getMatching(match).size() == 0) {
                     System.out.println("No se ha encontrado ninguna cancion con esa cadena");
-                }
-            }
         }
+            
+        
     }
 
     public void playMatching(String match){
-        getMatching(match);
        
-        for (String filename : files) {
-            if (filename.contains(match)) {
+        for (String filename : getMatching(match)) {
                 System.out.println(filename);
                 this.player.playSample(filename);
-            }
+            
         }
     }
 
@@ -97,6 +93,24 @@ public class MusicOrganizer
             }
         }
         return files2;
+    }
+
+    public int findFirst(String searchString)
+    {
+        boolean found = false;
+        int cancionEncontrada = -1;
+        int index = 0;  
+        int longitudFiles = files.size();
+        while (!found && index < longitudFiles)
+        {
+            if(this.files.get(index).contains(searchString))
+            {
+                found = true;
+                cancionEncontrada = index;
+            }
+            index++;
+        }
+        return cancionEncontrada;
     }
     
     /**
