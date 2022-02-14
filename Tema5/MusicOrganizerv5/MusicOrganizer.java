@@ -1,4 +1,4 @@
-package Tema5.MusuicOrganizerv5;
+package Tema5.MusicOrganizerv5;
 
 import java.util.ArrayList;
 
@@ -59,6 +59,7 @@ public class MusicOrganizer
             Track track = tracks.get(index);
             player.startPlaying(track.getFilename());
             System.out.println("Now playing: " + track.getArtist() + " - " + track.getTitle());
+            track.incPlayCount();
         }
     }
     
@@ -180,4 +181,6 @@ public class MusicOrganizer
             }
         }
     }
+
+    
 }

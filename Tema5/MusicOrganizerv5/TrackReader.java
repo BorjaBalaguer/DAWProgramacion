@@ -1,4 +1,4 @@
-package Tema5.MusuicOrganizerv5;
+package Tema5.MusicOrganizerv5;
 
 import java.io.File;
 import java.io.FilenameFilter;

@@ -1,4 +1,4 @@
-package Tema5.MusuicOrganizerv5;
+package Tema5.MusicOrganizerv5;
 
 /**
  * Store the details of a music track,
@@ -15,6 +15,8 @@ public class Track
     private String title;
     // Where the track is stored.
     private String filename;
+    // Contador para el objeto track
+    private int playCount = 0;
     
     /**
      * Constructor for objects of class Track.
@@ -86,5 +88,12 @@ public class Track
         this.title = title;
         this.filename = filename;
     }
-    
+
+    public void resetPlayCount(){
+        playCount = 0;
+    }
+
+    public void incPlayCount(){
+        playCount +=1;
+    }   
 }
