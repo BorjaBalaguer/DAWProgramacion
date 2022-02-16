@@ -3,6 +3,7 @@
 <?xml-stylesheet type="text/css" href="Peliculas.css"?>
 
 <filmoteca>
+<inicio>Peliculas Favoritas Borja</inicio>
     <peliculas id = "pelicula1">
         <portada imagen="1"></portada>
         <titulo>La milla verde</titulo>
@@ -10,6 +11,7 @@
         <duracion>180 minutos</duracion>
         <director>Frank Darabont</director>
     </peliculas>
+  
     <peliculas id = "pelicula2">
         <portada imagen="2"></portada>
         <titulo>Lo imposible</titulo>
@@ -19,16 +21,16 @@
     </peliculas>
     <peliculas id = "pelicula3">
         <portada imagen="3"></portada>
-        <titulo>Terminator 2</titulo>
-        <estreno>1991</estreno>
-        <duracion>139 minutos</duracion>
-        <director>James Cameron</director>
+        <titulo id = "tit">Terminator 2</titulo>
+        <estreno id ="est">1991</estreno>
+        <duracion id = "dur">139 minutos</duracion>
+        <director id ="dir">James Cameron</director>
     </peliculas>
     <peliculas id = "pelicula4">
         <portada imagen="4"></portada>
-        <titulo>Celda 211</titulo>
-        <estreno>2009</estreno>
-        <duracion>110 minutos</duracion>
-        <director>Daniel Monzón</director>
+        <titulo id = "tit2">Celda 211</titulo>
+        <estreno id ="est2">2009</estreno>
+        <duracion id = "dur2">110 minutos</duracion>
+        <director id = "dir2">Daniel Monzón</director>
     </peliculas>
 </filmoteca>
