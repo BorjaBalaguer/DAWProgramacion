@@ -17,7 +17,10 @@ public class Track
     private String filename;
     // Contador para el objeto track
     private int playCount = 0;
+    //Atributo album
+    private String album;
     
+
     /**
      * Constructor for objects of class Track.
      * @param artist The track's artist.
@@ -67,14 +70,6 @@ public class Track
         return filename;
     }
         
-    /**
-     * Return details of the track: artist, title and file name.
-     * @return The track's details.
-     */
-    public String getDetails()
-    {
-        return artist + ": " + title + "  (file: " + filename + ")";
-    }
     
     /**
      * Set details of the track.
@@ -95,5 +90,18 @@ public class Track
 
     public void incPlayCount(){
         playCount +=1;
-    }   
+    } 
+
+    public String toString(){
+        return artist + ": " + title + "  (file: " + filename + ")" + 
+                " " + album;
+    }
+    
+    public String getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
+    }
 }
