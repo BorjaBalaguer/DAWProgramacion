@@ -15,7 +15,7 @@ public class Usuario {
 
 
     public Usuario(){
-        this.id = 000;
+        this.id = idGenerator++;
         this.email = "nonuser@gmail.com";
         this.password = "xxxx1234";
     }
@@ -57,6 +57,15 @@ public class Usuario {
             }
         }
         return email;
+    }
+
+    private void eliminarUsuario(String email){
+        for (Usuario items: list) {
+            if (items.email.equals(email)) {
+                emails.remove(items);
+                break;
+            }
+        }
     }
 
 }
