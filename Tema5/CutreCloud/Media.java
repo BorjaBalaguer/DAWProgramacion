@@ -1,10 +1,8 @@
-package Tema5;
+package Tema5.CutreCloud;
 
 import java.util.ArrayList;
 
-import Tema5.TicketMachine.MediaType;
-
-public class Media {
+public class Media implements ParseXML{
     private int id;
     private String nombre;
     private String contenido;
@@ -62,6 +60,14 @@ public class Media {
         }
     }
 
-
+    public String generateXML(){
+        return  "<media>" +
+                "<id>" + this.id + "</id>" +
+                "<nombre>" + this.nombre + "</nombre>" +
+                "<contenido>" + this.contenido + "</contenido>" +
+                "<tipo>" + this.tipo + "</tipo>" +
+                "<this.usuario_id>" + this.usuario_id + "</this.usuario_id>" +
+                "</media>";
+    }
 
 }

@@ -1,8 +1,8 @@
-package Tema5;
+package Tema5.CutreCloud;
 
 import java.util.ArrayList;
 
-public class Usuario {
+public class Usuario implements ParseXML{
     private int id;
     private String email;
     private String password;
@@ -66,6 +66,14 @@ public class Usuario {
                 break;
             }
         }
+    }
+
+    public String generateXML(){
+        return  "<usuario>" +
+                "<id>" + this.id + "</id>" +
+                "<email>" + this.email + "</email>" +
+                "<password>" + this.password + "</password>" +
+                "</usuario>";
     }
 
 }
