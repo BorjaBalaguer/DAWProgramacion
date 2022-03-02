@@ -62,11 +62,11 @@ public class Media implements ParseXML{
 
     public String generateXML(){
         return  "<media>" +
-                "<id>" + this.id + "</id>" +
-                "<nombre>" + this.nombre + "</nombre>" +
-                "<contenido>" + this.contenido + "</contenido>" +
-                "<tipo>" + this.tipo + "</tipo>" +
-                "<this.usuario_id>" + this.usuario_id + "</this.usuario_id>" +
+                "<id>" + this.id + "</id\n>" +
+                "<nombre>" + this.nombre + "</nombre>\n" +
+                "<contenido>" + this.contenido + "</contenido>\n" +
+                "<tipo>" + this.tipo + "</tipo>\n" +
+                "<this.usuario_id>" + this.usuario_id + "</this.usuario_id>\n" +
                 "</media>";
     }
 
