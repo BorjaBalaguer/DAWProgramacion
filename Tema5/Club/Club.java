@@ -13,14 +13,14 @@ public class Club
 {
     // Define any necessary fields here ...
 
-    private static ArrayList<Membership> miembrosclub = new ArrayList<>();
+    private static ArrayList<Membership> miembrosclub;
     
     /**
      * Constructor for objects of class Club
      */
     public Club()
     {
-        // Initialise any fields here ...
+        miembrosclub = new ArrayList<Membership>();
         
     }
 

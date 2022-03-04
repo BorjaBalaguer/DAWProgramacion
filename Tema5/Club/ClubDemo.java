@@ -34,4 +34,13 @@ public class ClubDemo
                            club.numberOfMembers() +
                            " members.");
     }
+
+    public static void main(String[] args) {
+        try {
+            ClubDemo c = new ClubDemo();
+            c.demo();
+        } catch (Exception e) {
+          System.out.println(e.getMessage());
+        }
+    }
 }
