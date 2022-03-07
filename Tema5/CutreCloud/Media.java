@@ -69,5 +69,4 @@ public class Media implements ParseXML{
                 "<this.usuario_id>" + this.usuario_id + "</this.usuario_id>\n" +
                 "</media>";
     }
-
 }

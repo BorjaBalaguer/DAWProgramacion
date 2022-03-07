@@ -1,5 +1,8 @@
 package Tema5.CutreCloud;
 
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.util.ArrayList;
 
 public class Usuario implements ParseXML{
@@ -74,6 +77,27 @@ public class Usuario implements ParseXML{
                 "<email>" + this.email + "</email>" +
                 "<password>" + this.password + "</password>" +
                 "</usuario>";
+    }
+
+    public void writeXML(){
+        
+        try {
+
+            String ruta = "Tema5/CutreCloud/xmlCreados/Usuario" + id + ".xml";
+            String contenido = this.toString();
+            
+            File file = new File(ruta);
+            
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+            FileWriter fw = new FileWriter(file);
+            BufferedWriter bw = new BufferedWriter(fw);
+            bw.write(contenido);
+            bw.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 }
