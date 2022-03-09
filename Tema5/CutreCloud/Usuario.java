@@ -4,6 +4,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Usuario implements ParseXML{
     private int id;
@@ -98,6 +99,35 @@ public class Usuario implements ParseXML{
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void usuarioInput(){
+        Scanner lector = new Scanner(System.in);
+        int indice = 0;
+        String email;
+        String contraseña;
+
+        indice = pedirIndice(lector);
+
+        while (indice == 1) {
+            System.out.println("Email del usuario: ");
+            email = lector.next();
+            System.out.println("Contraseña del usuario: ");
+            contraseña = lector.next();
+
+            indice = pedirIndice(lector);
+        }
+    }
+
+    private int pedirIndice(Scanner lector) {
+        int indice;
+        System.out.println("Introduce 1 para crear Usuario o 0 para salir");
+        indice = lector.nextInt();
+        return indice;
+    }
+
+    public void createUsuario(){
+
     }
 
 }
