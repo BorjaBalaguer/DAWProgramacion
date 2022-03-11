@@ -1,10 +1,17 @@
 package Tema5.CutreCloud;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Scanner;
+import java.util.Iterator;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 public class Usuario implements ParseXML{
     private int id;
@@ -12,122 +19,142 @@ public class Usuario implements ParseXML{
     private String password;
 
     public static ArrayList<Usuario> list = new ArrayList<>();
-    private static int idGenerator;
+    private static int idGenerator = 0;
 
-    private static ArrayList<Integer> ids;
-    private static ArrayList<String> emails;
-
-
-    public Usuario(){
-        this.id = idGenerator++;
-        this.email = "nonuser@gmail.com";
-        this.password = "xxxx1234";
-    }
-
-    public Usuario(String email, String password){
-        this.id = idGenerator++;
-        this.email = comprobarEmail(email);
+    
+    public Usuario(String email, String password) {
+        
         this.password = password;
 
-        list.add(this);
+        if (this.isEmailAvailable(email)){
+            this.id = idGenerator++;
+            this.email = email;
+            list.add(this);
+        }else{
+            this.id = -1;
+            this.email = "Correo duplicado: " + email;
+        }
+    }
+
+    private boolean isEmailAvailable(String email){
+        boolean resultado = true;
+
+        for (Usuario usuario : list) {
+            if(email.equals(usuario.getEmail())){
+                resultado = false;
+                break;
+            }
+        }
+
+        return resultado;
     }
 
     public int getId() {
         return id;
     }
-
+    
     public String getEmail() {
         return email;
     }
-
     public void setEmail(String email) {
         this.email = email;
     }
-
     public String getPassword() {
         return password;
     }
-
     public void setPassword(String password) {
         this.password = password;
     }
 
-    private static String comprobarEmail(String email){
-        for (String correo : emails) {
-            if (emails.contains(email)) { 
+    public static boolean removeOneByName(String email){
 
-            }else{
-                emails.add(email);
-            }
-        }
-        return email;
-    }
+        boolean resultado = false;
 
-    private void eliminarUsuario(String email){
-        for (Usuario items: list) {
-            if (items.email.equals(email)) {
-                emails.remove(items);
+        for (Usuario person : list) {
+            if (person.email.equals(email)){
+                list.remove(person);
+                resultado = true;
                 break;
             }
         }
+
+        return resultado;
     }
 
-    public String generateXML(){
-        return  "<usuario>" +
-                "<id>" + this.id + "</id>" +
-                "<email>" + this.email + "</email>" +
-                "<password>" + this.password + "</password>" +
-                "</usuario>";
+    public static void removeAllByDomain(String domain){
+
+        Iterator<Usuario> it = list.iterator();
+
+        while(it.hasNext()){
+            Usuario user = it.next();
+
+            if (user.email.endsWith(domain)){
+                list.remove(user);
+            }
+        }
+
+    }
+
+
+    public String generateXML() {
+        String xml = "<usuario>\n";
+        xml += "<id>" + id + "</id>\n";
+        xml += "<password>" + password + "</password>\n";
+        xml += "<email>" + email + "</email>\n";
+        xml += "</usuario>\n";
+        return xml;
     }
 
     public void writeXML(){
-        
-        try {
+        String filename = Config.userFolder + getId() + ".xml";
+        File fichero = new File(filename);
 
-            String ruta = "Tema5/CutreCloud/xmlCreados/Usuario" + id + ".xml";
-            String contenido = this.toString();
-            
-            File file = new File(ruta);
-            
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-            FileWriter fw = new FileWriter(file);
-            BufferedWriter bw = new BufferedWriter(fw);
-            bw.write(contenido);
-            bw.close();
-        } catch (Exception e) {
+        try {
+            fichero.createNewFile();
+            FileWriter fw = new FileWriter(fichero);
+            fw.write(generateXML());
+            fw.close();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
             e.printStackTrace();
         }
+        
     }
 
-    public void usuarioInput(){
-        Scanner lector = new Scanner(System.in);
-        int indice = 0;
-        String email;
-        String contraseña;
+    public static void loadXML(){
+         File folder = new File("./usuarios");
 
-        indice = pedirIndice(lector);
+         list.clear();
+         
+         for (File xmlFile : folder.listFiles()) {
+             list.add(getLoadSingleXML(xmlFile));
+         }
+    }
 
-        while (indice == 1) {
-            System.out.println("Email del usuario: ");
-            email = lector.next();
-            System.out.println("Contraseña del usuario: ");
-            contraseña = lector.next();
+    private static Usuario getLoadSingleXML(File xmlFile) {
 
-            indice = pedirIndice(lector);
+        DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder;
+        Document doc;
+        Usuario newUser = null;
+
+        try {
+            dBuilder = dbFactory.newDocumentBuilder();
+            doc = dBuilder.parse(xmlFile);
+            String email = doc.getElementsByTagName("email").item(0).getTextContent();
+            String password = doc.getElementsByTagName("password").item(0).getTextContent();
+            newUser = new Usuario(email, password);
+        } catch (ParserConfigurationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (SAXException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
+        
+        return newUser;
     }
-
-    private int pedirIndice(Scanner lector) {
-        int indice;
-        System.out.println("Introduce 1 para crear Usuario o 0 para salir");
-        indice = lector.nextInt();
-        return indice;
-    }
-
-    public void createUsuario(){
-
-    }
-
 }
