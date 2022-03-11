@@ -1,0 +1,37 @@
+librerias{
+    background-color: rgba(79, 137, 185, 0.5);
+    display: block;
+}
+nombre{
+    font-size: 15px;
+    text-align: center;
+    display: block;
+}
+libros{
+    background-color: rgba(79, 137, 185);
+    display: block;
+}
+libro{
+    text-align: center;
+    display: block;
+}
+titulo{
+    font-size: 15px;
+    text-decoration: overline;
+    display: block;
+}
+nivel{
+    display: block;
+}
+autor{
+    display: block;
+}
+editorial{
+    display: block;
+}
+fecha_publicacion{
+    display: block;
+}
+precio{
+    display: block;
+}
