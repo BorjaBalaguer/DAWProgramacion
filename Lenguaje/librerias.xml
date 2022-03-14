@@ -11,7 +11,8 @@
 			<autor>Thierry Boulanger</autor>
 			<editorial>Eni</editorial>
 		  	<fecha_publicacion>17/09/2015</fecha_publicacion>
-			<precio>28,40</precio>
+			<precio>Precio: 28,40</precio>
 		      </libro>
 		</libros>
 	</libreria>
+</librerias>
