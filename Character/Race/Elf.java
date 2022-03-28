@@ -1,12 +1,25 @@
 package Character.Race;
-import Character.Stat.Stat;
+
+import Character.Stat.*;
 
 public class Elf extends Race{
 
+    int resultado = 0;
+
     @Override
     public int modifier(Stat stat) {
-        // TODO Auto-generated method stub
-        return 0;
+        if(stat instanceof Dexterity){
+            resultado = 3;
+        }else if(stat instanceof Constitution){
+            resultado = -1;
+        }else if(stat instanceof Intelligence){
+            resultado = 3;
+        }
+        return resultado;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Elf";
+    }
 }

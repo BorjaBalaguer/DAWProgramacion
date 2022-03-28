@@ -1,8 +1,6 @@
 package Character.Race;
-import Character.Stat.Constitution;
-import Character.Stat.Intelligence;
-import Character.Stat.Stat;
-import Character.Stat.Strength;
+
+import Character.Stat.*;
 
 public class Orc extends Race{
 
@@ -22,5 +20,8 @@ public class Orc extends Race{
         return resultado;
     }
 
-    
+    @Override
+    public String toString() {
+        return "Orc";
+    }
 }

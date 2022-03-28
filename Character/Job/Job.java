@@ -9,19 +9,18 @@ public abstract class Job {
     @Override
     //Devuelve true si son la misma clase
     public boolean equals(Object obj){
-        if (obj == this)
-        {
-        return true;
-        }
-        else 
-        {
-        return false;
+        if (obj == this){
+            return true;
+        }else if (obj == null){
+            return false;
+        }else{
+            return false;   
         }
     }
 
     @Override
     //Devuelve el nombre simple de la clase
     public String toString(){
-        return "Job";
+        return "Job []";
     }
 }
