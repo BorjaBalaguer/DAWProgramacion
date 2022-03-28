@@ -1,25 +1,25 @@
-package Character.Race;
+package RPG.Character.Job;
 
-import Character.Stat.*;
+import RPG.Character.Stat.*;
 
-public class Gnome extends Race{
+public class Assasin extends Job{
 
     int resultado = 0;
 
     @Override
     public int modifier(Stat stat) {
-        if(stat instanceof Dexterity){
+        if (stat instanceof Dexterity){
+            resultado = 3;
+        }else if(stat instanceof Strength){
             resultado = 1;
         }else if(stat instanceof Constitution){
             resultado = 1;
-        }else if(stat instanceof Intelligence){
-            resultado = 3;
         }
         return resultado;
     }
 
     @Override
     public String toString() {
-        return "Gnome";
+        return "Assassin";
     }
 }

@@ -1,6 +1,6 @@
-package Character.Race;
+package RPG.Character.Race;
 
-import Character.Stat.*;
+import RPG.Character.Stat.*;
 
 public class Human extends Race{
 
@@ -19,7 +19,7 @@ public class Human extends Race{
         }
         return resultado;
     }
-    
+
     @Override
     public String toString() {
         return "Human";

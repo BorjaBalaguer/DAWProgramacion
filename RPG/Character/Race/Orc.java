@@ -1,6 +1,6 @@
-package Character.Race;
+package RPG.Character.Race;
 
-import Character.Stat.*;
+import RPG.Character.Stat.*;
 
 public class Orc extends Race{
 

@@ -1,4 +1,4 @@
-package Character.Stat;
+package RPG.Character.Stat;
 
 public class Intelligence extends Stat{
 

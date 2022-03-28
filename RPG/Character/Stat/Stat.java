@@ -1,4 +1,4 @@
-package Character.Stat;
+package RPG.Character.Stat;
 
 public class Stat {
     public int value;
@@ -15,17 +15,17 @@ public class Stat {
 
     //Aumenta el valor de la carecterística en 1
     public void increase(){
-        value += 1;
+        value++;
     }
 
     //Disminuye el valor de la característica en 1
     public void decrease(){
-        value -= 1;
+        value--;
     }
 
     @Override
     //Devuelve el nombre simple de la clase
     public String toString(){
-        return "Value" + value;
+        return "" + value;
     }
 }

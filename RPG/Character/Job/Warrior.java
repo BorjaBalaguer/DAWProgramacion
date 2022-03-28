@@ -1,6 +1,6 @@
-package Character.Job;
+package RPG.Character.Job;
 
-import Character.Stat.*;
+import RPG.Character.Stat.*;
 
 public class Warrior extends Job{
 

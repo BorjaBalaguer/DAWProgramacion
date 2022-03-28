@@ -1,8 +1,8 @@
-package Character.Job;
-import Character.Stat.Stat;
+package RPG.Character.Race;
 
-public abstract class Job {
-    
+import RPG.Character.Stat.Stat;
+
+public abstract class Race {
     //Devuelve el modificador de la profesión segun el stat
     public abstract int modifier(Stat stat);
 
@@ -21,6 +21,6 @@ public abstract class Job {
     @Override
     //Devuelve el nombre simple de la clase
     public String toString(){
-        return "Job []";
+        return "Race";
     }
 }

@@ -1,23 +1,23 @@
-package Character.Job;
-import Character.Stat.*;
+package RPG.Character.Job;
 
-public class Suport extends Job{
+import RPG.Character.Stat.*;
 
+public class Mage extends Job{
+    
     int resultado = 0;
 
     @Override
     public int modifier(Stat stat) {
-        if(stat instanceof Intelligence){
-            resultado = 3;
+        if (stat instanceof Strength){
+            resultado = -4;
         }else if(stat instanceof Constitution){
-            resultado = 2;
+            resultado = 1;
         }
         return resultado;
     }
 
     @Override
     public String toString() {
-        return "Suport";
+        return "Mage";
     }
-    
 }
