@@ -25,7 +25,7 @@ public class Character implements IDamageable {
         this.name = name;
         this.race = race;
         this.job = job;
-        this.health = 250.0;
+        this.health = maxHealth();
         this.strength = new Strength(strength);
         this.dexterity = new Dexterity(dexterity);
         this.constitution = new Constitution(constitution);
@@ -74,7 +74,7 @@ public class Character implements IDamageable {
 
     @Override
     public boolean isDead() {
-        if(health < 0){
+        if(health <= 0){
             return true;
         }else{
             return false;
