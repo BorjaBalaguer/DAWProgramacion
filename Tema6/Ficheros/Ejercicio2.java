@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
-public class Ejercicio1 {
+public class Ejercicio2 {
 
     private static void imprimirFichero(File e, int id) {
 
