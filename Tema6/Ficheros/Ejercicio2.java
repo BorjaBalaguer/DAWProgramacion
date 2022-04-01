@@ -1,10 +1,7 @@
 package Tema6.Ficheros;
 
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.sql.Date;
 import java.text.DateFormat;
 import java.util.Locale;
 import java.util.Scanner;
@@ -14,25 +11,52 @@ public class Ejercicio2 {
     private static void imprimirFichero(File e, int id) {
         DateFormat formatter;
         formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM, Locale.getDefault());
-        //No imprime los ficheros/directorios ocultos
+        
+        String permisos = saberPermisos(e);
 
-       if (!e.isHidden()) {
+        if (!e.isHidden()) {
 
            if (e.isFile()) {
 
-               System.out.println(id + ".- \t" + "dr-x" + "\t" + String.format("%-15d", e.length()) + formatter.format(e.lastModified()) + "\t" + e.getName() + " " + e.length());
+               System.out.println(id + ".- \t" + permisos + "\t" + String.format("%-15d", e.length()) + formatter.format(e.lastModified()) + "\t" + e.getName());
 
-           }
+            }
 
            if (e.isDirectory()){
 
-               System.out.println(id + ".- \t" + "dr-x" + "\t" + String.format("%-15d", e.length()) + formatter.format(e.lastModified()) + "\t" + e.getName() + " <Directorio>");
+               System.out.println(id + ".- \t" + permisos + "\t" + String.format("%-15d", e.length()) + formatter.format(e.lastModified()) + "\t" + e.getName());
 
-           }
+            }
 
-       }
+        }
 
-   }
+    }
+
+    private static String saberPermisos(File e) {
+        String permisos = "";
+
+        if (e.isDirectory()) {
+            permisos = "d";
+        }else{
+            permisos = "-";
+        }
+        if (e.canRead()) {
+            permisos += "r";
+        }else{
+            permisos += "-";
+        }
+        if (e.canWrite()) {
+            permisos += "w";
+        }else{
+            permisos += "-";
+        }
+        if (e.canExecute()) {
+            permisos += "x";
+        }else{
+            permisos += "-";
+        }
+        return permisos;
+    }
 
    private static void imprimirDirectorio(File f) throws IOException {
 
