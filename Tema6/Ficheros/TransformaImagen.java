@@ -60,6 +60,27 @@ public class TransformaImagen {
         reader.close();
         writer.close();
     }
+    public void transformaBrillo() throws IOException {
+        FileInputStream reader = new FileInputStream(this.f);
+        File fOut = new File("Tema6/Ficheros/penyagolosa_b.bmp");
+        FileOutputStream writer = new FileOutputStream(fOut);
+
+        byte[] cabecera = new byte[54];
+        
+        int c = 0;
+
+        reader.read(cabecera);
+        writer.write(cabecera);
+
+        c = reader.read();
+        while(c != -1) {
+            writer.write((char)c*2);
+            c = reader.read();
+        }
+
+        reader.close();
+        writer.close();
+    }
     public void transformaNegroBlanco() throws IOException {
         FileInputStream reader = new FileInputStream(this.f);
         File fOut = new File("Tema6/Ficheros/penyagolosa_bn.bmp");
