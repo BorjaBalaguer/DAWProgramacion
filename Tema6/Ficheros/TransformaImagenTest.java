@@ -11,6 +11,7 @@ public class TransformaImagenTest {
             ti.transformaNegativo();
             ti.transformaNegroBlanco();
             ti.transformaOscuro();
+            ti.transformaBrillo();
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
