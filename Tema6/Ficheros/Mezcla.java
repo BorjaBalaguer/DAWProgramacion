@@ -7,52 +7,57 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.io.Reader;
 
 public class Mezcla {
 
     private static void crearFichero(File f, File e) throws IOException{
-        File mezcla = new File("./ficheros/mezcla.txt");
+        FileReader fileReader1;
+        FileReader fileReader2;
+        String linia1;
+        String linia2;
+        File mezcla = new File("Tema6/Ficheros/mezcla.txt");
+        FileOutputStream writer = new FileOutputStream(mezcla);
+        PrintWriter pw = new PrintWriter(mezcla);
+        BufferedReader reader1;
+        BufferedReader reader2;
+        
+        fileReader1 = new FileReader(f);
+        fileReader2 = new FileReader(e);
 
-        if (f.exists() & e.exists()) {
-            BufferedReader f1 = new BufferedReader(new FileReader(f));
-            BufferedReader f2 = new BufferedReader(new FileReader(f));
+        reader1 = new BufferedReader(fileReader1);
+        reader2 = new BufferedReader(fileReader2);
 
-            String linia = f1.readLine();
-        }
-
-    }
-
-    private static void crearFichero2(File f, File e) throws IOException{
-        FileOutputStream f_out = new FileOutputStream("./ficheros/mezcla.txt");
-        if (f.exists() & e.exists()) {
-            FileInputStream f_in1 = new FileInputStream(f);
-            FileInputStream f_in2 = new FileInputStream(e);
-
-            int c = f_in1.read();
-            int d = f_in2.read();
-            
-            while (c != -1 & d != -1) {
-                f_out.write(c);
-                f_out.write(d);
-                c = f_in1.read();
-                d = f_in2.read();
+        if (f.exists()& e.exists()){
+            while ((linia1 = reader1.readLine()) != null | (linia2 = reader2.readLine()) != null) {
+                if((linia1 != null){
+                    pw.println(linia1);
+                }
+                if((linia2 = reader2.readLine()) != null){
+                    pw.println(linia2);
+                }
             }
-
         }
-       
-
+        reader1.close();
+        reader2.close();
+        pw.close();
     }
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         FileReader fileReader1;
         FileReader fileReader2;
 
         BufferedReader reader1;
         BufferedReader reader2;
 
+        File f1 = new File("Tema6/Ficheros/f1.txt");
+        File f2 = new File("Tema6/Ficheros/f2.txt");
+
+        crearFichero(f1, f2);
+
         try {
-            fileReader1 = new FileReader("f1.txt");
-            fileReader2 = new FileReader("f2.txt");
+            fileReader1 = new FileReader("Tema6/Ficheros/f1.txt");
+            fileReader2 = new FileReader("Tema6/Ficheros/f2.txt");
 
             reader1 = new BufferedReader(fileReader1);
             reader2 = new BufferedReader(fileReader2);
@@ -62,8 +67,5 @@ public class Mezcla {
         } catch (IOException e){
             e.printStackTrace();
         }
-
-        
-
     }    
 }
