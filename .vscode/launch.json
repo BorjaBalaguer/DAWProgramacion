@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LeePrimos",
+            "request": "launch",
+            "mainClass": "Tema6.Ficheros.LeePrimos",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
             "name": "Launch EscribePrimos",
             "request": "launch",
             "mainClass": "Tema6.Ficheros.EscribePrimos",
