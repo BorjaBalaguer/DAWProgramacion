@@ -31,10 +31,10 @@ public class Mezcla {
 
         if (f.exists()& e.exists()){
             while ((linia1 = reader1.readLine()) != null | (linia2 = reader2.readLine()) != null) {
-                if((linia1 != null){
+                if((linia1 != null)){
                     pw.println(linia1);
                 }
-                if((linia2 = reader2.readLine()) != null){
+                if((linia2 != null)){
                     pw.println(linia2);
                 }
             }
