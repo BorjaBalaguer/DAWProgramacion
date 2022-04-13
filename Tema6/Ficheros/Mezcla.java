@@ -50,7 +50,7 @@ public class Mezcla {
         BufferedReader reader1;
         BufferedReader reader2;
 
-        File f1 = new File("Tema6/Ficheros/f1.txt");
+        File f1 = new File("Tema6/Ficheros/primos.dat");
         File f2 = new File("Tema6/Ficheros/f2.txt");
 
         crearFichero(f1, f2);

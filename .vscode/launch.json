@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch EscribePrimos",
+            "request": "launch",
+            "mainClass": "Tema6.Ficheros.EscribePrimos",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
             "name": "Launch Mezcla",
             "request": "launch",
             "mainClass": "Tema6.Ficheros.Mezcla",
