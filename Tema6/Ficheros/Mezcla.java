@@ -2,13 +2,10 @@ package Tema6.Ficheros;
 
 import java.io.BufferedReader;
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.io.Reader;
 
 public class Mezcla {
 
@@ -18,7 +15,6 @@ public class Mezcla {
         String linia1;
         String linia2;
         File mezcla = new File("Tema6/Ficheros/mezcla.txt");
-        FileOutputStream writer = new FileOutputStream(mezcla);
         PrintWriter pw = new PrintWriter(mezcla);
         BufferedReader reader1;
         BufferedReader reader2;
