@@ -1,8 +1,11 @@
 package Controles.Control04;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
@@ -11,24 +14,58 @@ import javax.swing.text.html.HTMLDocument.Iterator;
 
 public class PersistenciaCliente {
     
-    private static void write(ArrayList list) throws IOException{
-        File clientes = new File("Controles/Control04/clientes.dat");
-        PrintWriter pw = new PrintWriter(clientes);
+    private static final String nombreFichero = "clientes.dat";
 
-        for (int i = 0; i < list.size(); i++) {
-            pw.println(list.get(i));
+    public void write(ArrayList<Cliente> clientes){
+
+        FileWriter ficheroEscritura;
+        BufferedWriter escritor;
+
+        try {
+            ficheroEscritura = new FileWriter(nombreFichero);
+            escritor = new BufferedWriter(ficheroEscritura);
+
+            for (Cliente cliente : clientes) {
+                String linea = cliente.getId() + "," +
+                                cliente.getNif() + "," +
+                                cliente.getNombre() + "," +
+                                cliente.getApellidos() + "," +
+                                cliente.getEmail() + "\n";
+                escritor.write(linea);
+            }
+
+            escritor.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
     }
-    private static void read(String f) throws IOException{
-        FileReader fileReader1;
-        String linia1;
-        File mezcla = new File("Controles/Control04/" + f);
-        PrintWriter pw = new PrintWriter(mezcla);
-        BufferedReader reader1;
- 
-    }
-    public static void main(String[] args) throws IOException {
-        Cliente c1 = new Cliente("12345678L", "Borja", "Balaguer Martinez", "alu6588@ieselcaminas.org");
-        write(Cliente.list);
+
+    public ArrayList<Cliente> read(){
+
+        ArrayList<Cliente> resultado = new ArrayList<>();
+
+        FileReader ficheroLectura;
+        BufferedReader lector;
+        try {
+            ficheroLectura = new FileReader(nombreFichero);
+            lector = new BufferedReader(ficheroLectura);
+
+            String linea;
+
+            while ((linea = lector.readLine()) != null){
+                String [] trozos = linea.split(",");
+                Cliente cliente = new Cliente(trozos[1], trozos[2], trozos[3], trozos[0]);
+                resultado.add(cliente);
+            }
+            
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return resultado;
     }
 }
