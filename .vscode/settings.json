@@ -9,6 +9,7 @@
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "Tema5/lib/jl1.0.1.jar"
+        "Tema5/lib/jl1.0.1.jar",
+        "/home/INFORMATICA/alu10716588/Escriptori/mysql-connector-java-8.0.29/mysql-connector-java-8.0.29.jar"
     ]
 }
