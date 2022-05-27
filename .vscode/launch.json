@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch App",
+            "request": "launch",
+            "mainClass": "Controles.ControlAgenda.App",
+            "projectName": "DAWProgramacion_6fd92012"
+        },
+        {
+            "type": "java",
             "name": "Launch PersistenciaClienteTest",
             "request": "launch",
             "mainClass": "Controles.Control04.PersistenciaClienteTest",
