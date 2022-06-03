@@ -11,10 +11,7 @@ import java.util.Scanner;
 public class Agenda {
 
     private final String nombreFicheroTexto = "Controles/ControlAgenda/agenda.dat";
-    private final String nombreFicheroObjetos = "Controles/ControlAgenda/
-    agendaObjetos.dat";
-
-    
+    private final String nombreFicheroObjetos = "Controles/ControlAgenda/agendaObjetos.dat";
 
     private Scanner lector;
     
