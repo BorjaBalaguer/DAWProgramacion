@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MySqlUpdate",
+            "request": "launch",
+            "mainClass": "Tema7.MySqlUpdate",
+            "projectName": "DAWProgramacion_86ee39ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch MySqlCount",
+            "request": "launch",
+            "mainClass": "Tema7.MySqlCount",
+            "projectName": "DAWProgramacion_86ee39ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch MySqlInsert",
+            "request": "launch",
+            "mainClass": "Tema7.MySqlInsert",
+            "projectName": "DAWProgramacion_86ee39ea"
+        },
+        {
+            "type": "java",
             "name": "Launch MySqlAll",
             "request": "launch",
             "mainClass": "Tema7.MySqlAll",
