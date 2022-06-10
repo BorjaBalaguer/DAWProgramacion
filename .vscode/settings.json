@@ -11,6 +11,7 @@
         "lib/**/*.jar",
         "Tema5/lib/jl1.0.1.jar",
         "/home/INFORMATICA/alu10716588/Escriptori/mysql-connector-java-8.0.29/mysql-connector-java-8.0.29.jar",
-        "/home/INFORMATICA/alu10716588/Baixades/mysql-connector-java_8.0.29-1ubuntu21.10_all/usr/share/java/mysql-connector-java-8.0.29.jar"
+        "/home/INFORMATICA/alu10716588/Baixades/mysql-connector-java_8.0.29-1ubuntu21.10_all/usr/share/java/mysql-connector-java-8.0.29.jar",
+        "/usr/share/java/mysql-connector-java-8.0.29.jar"
     ]
 }

@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MySqlAll",
+            "request": "launch",
+            "mainClass": "Tema7.MySqlAll",
+            "projectName": "DAWProgramacion_86ee39ea"
+        },
+        {
+            "type": "java",
+            "name": "Launch Conexion",
+            "request": "launch",
+            "mainClass": "Tema7.Conexion",
+            "projectName": "DAWProgramacion_86ee39ea"
+        },
+        {
+            "type": "java",
             "name": "Launch Conexion",
             "request": "launch",
             "mainClass": "Tema7.Conexion",
